@@ -2,6 +2,7 @@ const express = require('express');
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 5000;
 const DB_URI = process.env.DB_URI;
 const DB_NAME = process.env.DB_NAME;
